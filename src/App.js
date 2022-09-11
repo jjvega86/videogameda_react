@@ -1,3 +1,5 @@
+// MUI
+import Container from "@mui/material/Container";
 // Components
 import NavBar from "./components/NavBar";
 import Header from "./components/Header";
@@ -9,7 +11,9 @@ function App() {
   return (
     <CustomTheme>
       <NavBar />
-      <Header displayText="Video Games - Analyzed" />
+      <Container>
+        <Header displayText="Video Games - Analyzed" />
+      </Container>
     </CustomTheme>
   );
 }
