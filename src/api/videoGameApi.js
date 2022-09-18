@@ -8,7 +8,9 @@ export const fetchGlobalGameSales = async () => {
     let response = await axios.get(
       "http://localhost:8080/getTotalSalesByYear/2013"
     );
-    return response.data;
+    let finalData = Object.entries(response.data);
+    console.log(finalData);
+    return finalData;
   } catch (error) {
     console.log(error.message);
   }
