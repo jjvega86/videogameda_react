@@ -6,6 +6,8 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
+import GameModal from "./GameModal";
+
 export default function GameTable({ games }) {
   return (
     <TableContainer component={Paper} sx={{ mb: 3 }}>
@@ -17,6 +19,7 @@ export default function GameTable({ games }) {
             <TableCell align="right">Genre</TableCell>
             <TableCell align="right">Year</TableCell>
             <TableCell align="right">Publisher</TableCell>
+            <TableCell align="right"></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -32,6 +35,11 @@ export default function GameTable({ games }) {
               <TableCell align="right">{game.genre}</TableCell>
               <TableCell align="right">{game.year}</TableCell>
               <TableCell align="right">{game.publisher}</TableCell>
+              <TableCell align="right">
+                <GameModal buttonTitle="DETAILS">
+                  <h1>Hello There</h1>
+                </GameModal>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
