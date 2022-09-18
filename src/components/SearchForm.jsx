@@ -12,6 +12,7 @@ export default function SearchForm() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        mb: 3,
       }}
     >
       <TextField
