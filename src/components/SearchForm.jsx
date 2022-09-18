@@ -1,6 +1,6 @@
 import { TextField, Box } from "@mui/material";
 
-export default function SearchForm() {
+export default function SearchForm({ setSearch }) {
   return (
     <Box
       component="form"
@@ -20,6 +20,7 @@ export default function SearchForm() {
         label="Search Games"
         variant="outlined"
         sx={{ color: "white" }}
+        onChange={(e) => setSearch(e.target.value)}
       />
     </Box>
   );

@@ -18,10 +18,12 @@ export const globalSalesGamesQuery = async () => {
 };
 
 export const searchGamesQuery = async (query) => {
+  let url =
+    query === ""
+      ? `http://localhost:8080/all`
+      : `http://localhost:8080/searchGames/${query}`;
   try {
-    let response = await axios.get(
-      `http://localhost:8080/searchGames/${query}`
-    );
+    let response = await axios.get(url);
     return response.data.slice(0, 5);
   } catch (error) {
     console.log(error.message);
