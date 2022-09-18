@@ -7,6 +7,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 import GameModal from "./GameModal";
+import GameDetail from "./GameDetail";
 
 export default function GameTable({ games }) {
   return (
@@ -37,7 +38,7 @@ export default function GameTable({ games }) {
               <TableCell align="right">{game.publisher}</TableCell>
               <TableCell align="right">
                 <GameModal buttonTitle="DETAILS">
-                  <h1>Hello There</h1>
+                  <GameDetail game={game} />
                 </GameModal>
               </TableCell>
             </TableRow>
