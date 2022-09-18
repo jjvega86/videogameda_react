@@ -5,6 +5,7 @@ import Container from "@mui/material/Container";
 import NavBar from "./components/NavBar";
 import Header from "./components/Header";
 import SearchForm from "./components/SearchForm";
+import GlobalGameSales from "./components/GlobalGameSales";
 
 // Utils
 import CustomTheme from "./theme/CustomTheme";
@@ -16,6 +17,7 @@ function App() {
       <Container>
         <Header displayText="Video Games - Analyzed" />
         <SearchForm />
+        <GlobalGameSales />
       </Container>
     </CustomTheme>
   );
