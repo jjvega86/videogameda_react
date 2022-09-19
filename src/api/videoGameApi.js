@@ -29,3 +29,14 @@ export const searchGamesQuery = async (query) => {
     console.log(error.message);
   }
 };
+
+export const getGameConsoleSalesQuery = async (gameName) => {
+  try {
+    let response = await axios.get(
+      `http://localhost:8080/getGameSales/${gameName}`
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
