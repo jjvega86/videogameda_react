@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 import { getGameConsoleSalesQuery } from "../api/videoGameApi";
+import GameSalesByConsole from "./GameSalesByConsole";
 
 const style = {
   position: "absolute",
@@ -33,13 +34,12 @@ export default function GameDetail({ game }) {
   }, [game.name]);
   return (
     <div>
-      {consoleInfo && console.log(consoleInfo)}
       <Box sx={style}>
         <Typography id="modal-modal-title" variant="h6" component="h2">
           {game.name}
         </Typography>
         <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-          {consoleInfo && <p>{consoleInfo["PS3"]}</p>}
+          {consoleInfo && <GameSalesByConsole consoleInfo={consoleInfo} />}
         </Typography>
       </Box>
     </div>
