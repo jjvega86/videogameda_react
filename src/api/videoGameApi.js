@@ -40,3 +40,18 @@ export const getGameConsoleSalesQuery = async (gameName) => {
     console.log(error);
   }
 };
+export const getPublisherConsoleSalesQuery = async (gameConsole) => {
+  try {
+    let response = await axios.get(
+      `http://localhost:8080/publisherSuccessByConsole/${gameConsole}`
+    );
+    let finalData = Object.entries(response.data);
+    finalData.sort(function (a, b) {
+      return b[1] - a[1];
+    });
+    let finalDataSlice = finalData.slice(0, 10);
+    return finalDataSlice;
+  } catch (error) {
+    console.log(error);
+  }
+};
