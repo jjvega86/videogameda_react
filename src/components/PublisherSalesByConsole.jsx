@@ -16,7 +16,10 @@ export default function PublisherSalesByConsole() {
     <>
       {console.log("Publisher Sales: ", publisherSales)}
       <h3>Top 10 Publisher Sales for the {gameConsole}</h3>
-      <GameConsoleSelector />
+      <GameConsoleSelector
+        gameConsole={gameConsole}
+        setGameConsole={setGameConsole}
+      />
     </>
   );
 }
