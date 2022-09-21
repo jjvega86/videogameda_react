@@ -40,3 +40,13 @@ export const getGameConsoleSalesQuery = async (gameName) => {
     console.log(error);
   }
 };
+export const getPublisherConsoleSalesQuery = async (gameConsole) => {
+  try {
+    let response = await axios.get(
+      `http://localhost:8080/publisherSuccessByConsole/${gameConsole}`
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
